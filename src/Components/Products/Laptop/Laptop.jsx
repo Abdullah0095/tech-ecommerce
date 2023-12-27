@@ -49,14 +49,13 @@ const LaptopDisplay = ({laptop}) => {
     const {title, image, price} = laptop;
     return (
         <div>
-            <div className='border-2 border-gray-500 m-2 py-6'>
+            <div className='border-2 border-gray-500 m-2 py-6 rounded-md min-h-96'>
                 <img className='h-40 mx-auto' src={image} alt="" />
                 <div className='text-black text-center'>
                     <h1 className='text-2xl '>{title}</h1>
                     <p className='text-lg font-semibold'>Price : {price} BDT</p>
-                    <button className="btn btn-success my-3 hover:text-orange-400 w-40 hover:animate-pulse">Buy Now</button>
-                </div>
-                
+                    <button className="btn btn-success my-8 hover:text-orange-400 w-40 hover:animate-pulse">Buy Now</button>
+                </div>  
             </div>
         </div>
     )

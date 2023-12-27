@@ -9,7 +9,7 @@ const Mobile = () => {
         },
         {
             title: 'One Plus',
-            image: 'https://i.ibb.co/FxkC8TZ/oneplus.webp',
+            image: 'https://i.ibb.co/GnDmCMD/oneplus.webp',
             price: '55999'
         },
         {
@@ -44,7 +44,7 @@ const Mobile = () => {
                 <h1 className='text-center text-black text-4xl font-bold'>Mobile Zone</h1>
                 <p className='text-center text-black text-xl py-3'>We Have {mobilefakeData.length} mobile in our stock</p>
             </div>
-            <div className='grid grid-cols-3 ml-4'>
+            <div className='grid grid-cols-4 mx-6'>
                 {
                     mobilefakeData.map(mobile => <MobileDisplay mobile={mobile} key={mobile.title}></MobileDisplay>)
                 }
@@ -56,16 +56,15 @@ const Mobile = () => {
 const MobileDisplay = ({ mobile }) => {
     const { title, image, price } = mobile;
     return (
-        <div className='m-2'>
-            <div className="card w-96 border-2 border-gray-600 h-[500px] py-2">
-                <figure><img src={image} alt="Shoes" /></figure>
-                <div className="card-body text-black">
-                    <h2 className="card-title">{title}</h2>
-                    <p className='py-2 font-bold'>Price : {price} BDT</p>
-                    <div className="card-actions justify-start">
-                        <button className="btn btn-primary">Buy Now</button>
-                    </div>
+        <div>
+            <div className='border-2 border-gray-500 m-2 py-6 rounded-md min-h-96'>
+                <img className='h-40 mx-auto' src={image} alt="" />
+                <div className='text-black text-center'>
+                    <h1 className='text-2xl '>{title}</h1>
+                    <p className='text-lg font-semibold'>Price : {price} BDT</p>
+                    <button className="btn btn-success my-8 hover:text-orange-400 w-40 hover:animate-pulse">Buy Now</button>
                 </div>
+                
             </div>
         </div>
     )
